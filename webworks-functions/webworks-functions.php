@@ -92,7 +92,7 @@ wp_enqueue_style($handle, $src, array(), false, false);
 	
 // Add Webworks contact widget to WordPress dashboard
 function ww_add_dashboard_widgets() {
-  wp_add_dashboard_widget('wp_dashboard_widget', 'Webworks Tools', 'ww_theme_info');
+  wp_add_dashboard_widget('wp_dashboard_widget', '#Webworks Tools', 'ww_theme_info');
 }
 add_action('wp_dashboard_setup', 'ww_add_dashboard_widgets' );
  
