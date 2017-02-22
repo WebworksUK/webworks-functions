@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+#wpadminbar #wp-admin-bar-webworks_link .ab-item {
+    background: transparent;
+}
 li#wp-admin-bar-webworks_link > .ab-item:before {
     content: ""!important;
     background-image: url(/wp-content/plugins/webworks-functions/login/logo-header.png)!important;
