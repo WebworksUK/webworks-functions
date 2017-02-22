@@ -1,0 +1,46 @@
+body.login {
+    background-image: url('https://webworks.london/wp-content/uploads/2014/11/WEBWORKS-background-2-rotate.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.login h1 a {
+    background-image: url('https://webworks.london/wp-content/uploads/2016/03/logo-login-url-phone.jpg')!important;
+    height: 138px!important;
+    width: 315px!important;
+    background-color: white!important;
+    border-style: solid;
+    background-size: cover!important;
+}
+label {
+   font-family: Myriad Pro;
+}
+p.message {
+    font-family: myriad pro;
+}
+p#nav {
+    font-family: myriad pro;
+}
+p#backtoblog {
+    font-family: myriad pro;
+}
+.login #nav, .login #backtoblog {
+    margin-top: 24px;
+    text-align: center;
+    padding: 11px!important;
+    font-size: 16px!important;
+    padding: 7px!important;
+}
+.login #nav a, .login #backtoblog a {
+    padding: 7px;
+}
+.login #backtoblog a, .login #nav a, .login h1 a {
+    text-decoration: none!important;
+    color: #FFFFFF!important;
+    background-color: #276A99!important;
+    border-radius: 3px!important;
+}
+.login #login_error {
+    font-family: Myriad Pro;
+}

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+li#wp-admin-bar-webworks_link > .ab-item:before {
+    content: ""!important;
+    background-image: url(/wp-content/plugins/webworks-functions/login/logo-header.png)!important;
+    background-repeat: no-repeat;
+    width: 166px;
+    height: 42px;
+    position: absolute;
+    top: -2px;
+    left: -8px;
+    background-size: contain;
+}
+li#wp-admin-bar-webworks_link {
+    width: 140px;
+    top: 0px;
+	float: right;
+	margin-right: 18px!important;
+}
+.wp-admin #wpwrap div#wpcontent {
+    background-image: url(/wp-content/plugins/webworks-functions/login/webworks-backgound-large.jpg)!important;
+    min-height: 100vh;
+    background-color: rgba(255,255,255,0.9);
+}
+#wpfooter {
+    background: rgba(255,255,255,0.75);
+    text-shadow: 0px 1px 1px black!important;
+}
