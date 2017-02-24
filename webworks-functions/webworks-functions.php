@@ -98,14 +98,21 @@ add_action('wp_dashboard_setup', 'ww_add_dashboard_widgets' );
  
 function ww_theme_info() {
   echo "<ul>
-  <li><a href='https://webworks.london/services/link.php?id=4' target='_blank'><img src='/wp-content/plugins/webworks-functions/login/logo-header.png' alt='Webworks UK Ltd' style='margin-bottom:-5px'></a></li>
+  <li><a href='https://webworks.london/services/link.php?id=4' target='_blank' rel='nofollow'><img src='/wp-content/plugins/webworks-functions/login/logo-header.png' alt='Webworks UK Ltd' style='margin-bottom:-5px'></a></li>
   <li><strong>Developed By:</strong> Webworks UK Limited</li>
-  <li><strong><a href='https://webworks.london/services/link.php?id=2' target='_blank'>Raise a support ticket</a></strong></li>
-  <li><strong><a href='https://webworks.london/services/clientarea.php' target='_blank'>Visit the Client Area</a></strong></li>
-  <li><strong><a href='https://webworks.london/services/knowledgebase.php' target='_blank'>Search the Knowledgebase</a></strong></li>
-  <li><strong><a href='https://webworks.london/services/announcements.php' target='_blank'>Latest news and announcements</a></strong></li>
-  <li><strong><a href='https://webworks.london/services/serverstatus.php' target='_blank'>Network Status</a></strong></li>
-  </ul>";
+  <li><strong><a href='https://webworks.london/services/link.php?id=2' target='_blank' rel='nofollow'>Raise a support ticket</a></strong></li>
+  <li><strong><a href='https://webworks.london/services/clientarea.php' target='_blank' rel='nofollow'>Visit the Client Area</a></strong></li>
+  <li><strong><a href='https://webworks.london/services/knowledgebase.php' target='_blank' rel='nofollow'>Search the Knowledgebase</a></strong></li>
+  <li><strong><a href='https://webworks.london/services/announcements.php' target='_blank' rel='nofollow'>Latest news and announcements</a></strong></li>
+  <li><strong><a href='https://webworks.london/services/serverstatus.php' target='_blank' rel='nofollow'>Network Status</a></strong></li>
+  </ul>
+  <strong>Log in to the client area</strong><br />
+  <form class='wp-dash-login' method='post' target='_blank' action='https://webworks.london/services/dologin.php'>
+<input class='fw-input' type='text' name='username' size='50' placeholder='Email address'/>
+<input class='fw-input' type='password' name='password' size='20' autocomplete='off' placeholder='Password'/>
+<input type='submit' value='Login' />
+<a href='https://webworks.london/services/dashbd/login.php?action=reset' target=_'blank'>Forgot your password?</a>
+</form>";
 }
 
 // Mail header return path
@@ -122,11 +129,11 @@ function ww_service_link() {
     if ( !is_admin_bar_showing() )
         return;
 
-	$ticket_link = '<a href="https://webworks.london/services/link.php?id=2" rel="nofollow">Raise a ticket</a>';
-	$client_area_link = '<a href="https://webworks.london/services/clientarea.php" rel="nofollow">Client Area</a>';
-	$knowledgebase_link = '<a href="https://webworks.london/services/knowledgebase.php" rel="nofollow">Knowledgebase</a>';
-	$announcements_link = '<a href="https://webworks.london/services/announcements.php" rel="nofollow">Announcements</a>';
-	$status_link = '<a href="https://webworks.london/services/serverstatus.php" rel="nofollow">Server status</a>';
+	$ticket_link = '<a href="https://webworks.london/services/link.php?id=2" target="_blank" rel="nofollow">Raise a ticket</a>';
+	$client_area_link = '<a href="https://webworks.london/services/clientarea.php" target="_blank" rel="nofollow">Client Area</a>';
+	$knowledgebase_link = '<a href="https://webworks.london/services/knowledgebase.php" target="_blank" rel="nofollow">Knowledgebase</a>';
+	$announcements_link = '<a href="https://webworks.london/services/announcements.php" target="_blank" rel="nofollow">Announcements</a>';
+	$status_link = '<a href="https://webworks.london/services/serverstatus.php" target="_blank" rel="nofollow">Server status</a>';
 		
     $wp_admin_bar->add_menu( array( 'id' => 'webworks_link', 'title' => __( '', 'textdomain' ), 'href' => FALSE ) );
 	/* Add the main siteadmin menu item */
