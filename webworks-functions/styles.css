@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-#wpadminbar #wp-admin-bar-webworks_link .ab-item {
-    background: transparent;
-}
 li#wp-admin-bar-webworks_link > .ab-item:before {
     content: ""!important;
     background-image: url(/wp-content/plugins/webworks-functions/login/logo-header.png)!important;
@@ -28,4 +25,7 @@ li#wp-admin-bar-webworks_link {
 #wpfooter {
     background: rgba(255,255,255,0.75);
     text-shadow: 0px 1px 1px black!important;
+}
+.wp-dash-login .fw-input {
+    width: 100%;
 }
