@@ -3,7 +3,7 @@
 * Plugin Name: Webworks Functions
 * Plugin URI: https://webworks.london
 * Description: This plugin contains Webworks custom functionality.
-* Version: 1.0
+* Version: 1.1
 * Author: Webworks UK Ltd
 * Author URI: https://webworks.london
 */
