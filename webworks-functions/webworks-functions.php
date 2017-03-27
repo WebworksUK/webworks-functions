@@ -8,7 +8,13 @@
 * Author URI: https://webworks.london
 */
 
-//Load custom login CSS
+// Hide WP version info
+function remove_version() {
+  return '';
+}
+add_filter('the_generator', 'remove_version');
+
+// Load custom login CSS
 function my_custom_login() {
     echo '<link rel="stylesheet" id="ww-admin-css" type="text/css" href="' . plugin_dir_url( __FILE__ ) . 'login/custom-login-styles.css">';
 }
@@ -20,7 +26,7 @@ return get_bloginfo( 'url' );
 
 add_filter( 'login_headerurl', 'my_login_logo_url' );
 
-//REPLACE LOGIN LOGO TO WEBWORKS.LONDON
+// REPLACE LOGIN LOGO TO WEBWORKS.LONDON
     function put_my_url(){
     return ('https://webworks.london/service-and-support/');
     }
