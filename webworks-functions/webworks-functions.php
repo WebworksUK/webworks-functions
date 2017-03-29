@@ -3,7 +3,7 @@
 * Plugin Name: Webworks Functions
 * Plugin URI: https://webworks.london
 * Description: This plugin contains Webworks custom functionality.
-* Version: 1.1
+* Version: 1.2
 * Author: Webworks UK Ltd
 * Author URI: https://webworks.london
 */
@@ -119,6 +119,17 @@ function ww_service_link() {
 
 add_action( 'admin_bar_menu', 'ww_service_link', 1000 );
 
+// Display warning if IWP - Client is not activated
+if ( ! function_exists('is_plugin_active'))
+{
+    include_once ABSPATH.'wp-admin/includes/plugin.php';
+}
+
+if ( ! is_plugin_active('iwp-client/init.php'))
+{
+        $msg = create_function('', 'echo "<div class=\"updated\"><p>The plugin IWP - Client has been disabled. Please reactivate this plugin if you wish to take advantage of your Webworks Managed Hosting package.</p></div>";');
+        add_action('admin_notices', $msg);
+}
 
 
  ?>
