@@ -3,7 +3,7 @@
 * Plugin Name: Webworks Functions
 * Plugin URI: https://webworks.london
 * Description: This plugin contains Webworks custom functionality.
-* Version: 1.2
+* Version: 1.2.1
 * Author: Webworks UK Ltd
 * Author URI: https://webworks.london
 */
@@ -110,11 +110,11 @@ function ww_service_link() {
 		
     $wp_admin_bar->add_menu( array( 'id' => 'webworks_link', 'title' => __( '', 'textdomain' ), 'href' => FALSE ) );
 	/* Add the main siteadmin menu item */
-    $wp_admin_bar->add_menu( array( 'parent' => 'webworks_link', 'title' => $ticket_link, 'href' => FALSE ) );
-	$wp_admin_bar->add_menu( array( 'parent' => 'webworks_link', 'title' => $client_area_link, 'href' => FALSE ) );
-	$wp_admin_bar->add_menu( array( 'parent' => 'webworks_link', 'title' => $knowledgebase_link, 'href' => FALSE ) );
-	$wp_admin_bar->add_menu( array( 'parent' => 'webworks_link', 'title' => $announcements_link, 'href' => FALSE ) );
-	$wp_admin_bar->add_menu( array( 'parent' => 'webworks_link', 'title' => $status_link, 'href' => FALSE ) );
+    $wp_admin_bar->add_menu( array( 'id' => 'ticket_link', 'parent' => 'webworks_link', 'title' => $ticket_link, 'href' => FALSE ) );
+	$wp_admin_bar->add_menu( array( 'id' => 'client_area_link', 'parent' => 'webworks_link', 'title' => $client_area_link, 'href' => FALSE ) );
+	$wp_admin_bar->add_menu( array( 'id' => 'knowledgebase_link', 'parent' => 'webworks_link', 'title' => $knowledgebase_link, 'href' => FALSE ) );
+	$wp_admin_bar->add_menu( array( 'id' => 'announcements_link', 'parent' => 'webworks_link', 'title' => $announcements_link, 'href' => FALSE ) );
+	$wp_admin_bar->add_menu( array( 'id' => 'status_link', 'parent' => 'webworks_link', 'title' => $status_link, 'href' => FALSE ) );
 }
 
 add_action( 'admin_bar_menu', 'ww_service_link', 1000 );
